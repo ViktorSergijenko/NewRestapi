@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 // tslint:disable-next-line:import-spacing
 import {FormsModule} from'@angular/forms';
+import {HttpModule} from '@angular/http';
 
 
 import { AppComponent } from './app.component';
@@ -20,7 +21,8 @@ import { HouseListComponent } from './houses/house-list/house-list.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]

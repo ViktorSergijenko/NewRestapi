@@ -7,6 +7,6 @@ export class House {
      public  City: string;
      public  Country: string;
      public  Postindex: string;
-     public Created: Date;
-     public Modified: Date;
+     public Created: Date = new Date;
+     public Modified: Date = new Date;
   }

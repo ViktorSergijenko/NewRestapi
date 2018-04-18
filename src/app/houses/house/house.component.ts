@@ -27,4 +27,10 @@ resetForm(form?: NgForm) {
     Modified : null
   };
  }
+ onSubmit(form: NgForm) {
+    this.houseService.postHouse(form.value)
+    .subscribe( data => {
+      this.resetForm(form);
+    });
+  }
 }
