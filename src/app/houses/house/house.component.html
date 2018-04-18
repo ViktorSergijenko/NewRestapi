@@ -22,10 +22,10 @@
     <input  class="form-control" name="Modified" #Modified="ngModel" [(ngModel)]="houseService.selectedHouse.Modified" placeholder="Modified">
   </div>
   <div class="form-group col-md-8">
-    <button type="submit" class="btn btn-lg btn-block btn-info">Submit</button>
+    <button type="submit" class="btn btn-lg btn-block btn-info"><i class="fa fa-save"></i> Submit</button>
   </div>
   <div class="form-group col-md-4">
-    <button type="button" class="btn btn-lg btn-block btn-secondary">Reset</button>
+    <button type="button" class="btn btn-lg btn-block btn-secondary"(click)="resetForm(houseForm)"><i class="fas fa-redo"></i> Reset</button>
   </div>
   </div>
 </form> 

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {HouseService} from '../shared/house.service';
+import { NgForm } from '@angular/forms';
 @Component({
   selector: 'app-house',
   templateUrl: './house.component.html',
@@ -11,5 +12,16 @@ export class HouseComponent implements OnInit {
 
   ngOnInit() {
   }
-
+resetForm(form: NgForm) {
+  form.reset();
+  this.houseService.selectedHouse = {
+    Id : null,
+    Street : '',
+    City : '',
+    Country : '',
+    Created : null,
+    Postindex : '',
+    Modified : null
+  };
+ }
 }
