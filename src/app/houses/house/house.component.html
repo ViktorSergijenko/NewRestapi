@@ -1,13 +1,16 @@
 <form  class="emp-form" #houseForm="ngForm">
 <div class="form-row">
   <div class="form-group col-md-6">
-    <input  class="form-control" name="Street" #Street="ngModel" [(ngModel)]="houseService.selectedHouse.Street" placeholder="Street">
+    <input  class="form-control" name="Street" #Street="ngModel" [(ngModel)]="houseService.selectedHouse.Street" placeholder="Street" required>
+    <div class="validation-error" *ngIf="Street.invalid && Street.touched">This field is Required</div>
   </div>
   <div class="form-group col-md-6">
-    <input  class="form-control" name="City" #City="ngModel" [(ngModel)]="houseService.selectedHouse.City" placeholder="City">
+    <input  class="form-control" name="City" #City="ngModel" [(ngModel)]="houseService.selectedHouse.City" placeholder="City" required> 
+    <div class="validation-error" *ngIf="City.invalid && City.touched">This field is Required</div>
   </div>
   <div class="form-group">
-    <input  class="form-control" name="Country" #Country="ngModel" [(ngModel)]="houseService.selectedHouse.Country" placeholder="Country">
+    <input  class="form-control" name="Country" #Country="ngModel" [(ngModel)]="houseService.selectedHouse.Country" placeholder="Country" required>
+    <div class="validation-error" *ngIf="Country.invalid && Country.touched">This field is Required</div>
   </div>
 </div>
 <div class="form-row">

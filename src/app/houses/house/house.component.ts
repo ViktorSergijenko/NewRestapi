@@ -11,8 +11,11 @@ export class HouseComponent implements OnInit {
   constructor(private houseService: HouseService) { }
 
   ngOnInit() {
+    this.resetForm();
   }
-resetForm(form: NgForm) {
+resetForm(form?: NgForm) {
+  // tslint:disable-next-line:curly
+  if (form != null)
   form.reset();
   this.houseService.selectedHouse = {
     Id : null,
