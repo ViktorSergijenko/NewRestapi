@@ -3,7 +3,7 @@
     <td>{{house.Street}} - {{house.City}} - {{house.Country}}</td>
     <td>{{house.Postindex}}</td>
     <td>
-      <a class="btn">
+      <a class="btn" (click)="showForEdit(house)">
         <i class="fa fa-pencil-square-o"></i>
       </a>
       <a class="btn text-danger">

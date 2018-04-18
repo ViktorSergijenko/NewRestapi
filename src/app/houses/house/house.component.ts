@@ -29,10 +29,23 @@ resetForm(form?: NgForm) {
   };
  }
  onSubmit(form: NgForm) {
+   // tslint:disable-next-line:curly
+   if (form.value.Id == null) {
     this.houseService.postHouse(form.value)
     .subscribe( data => {
       this.resetForm(form);
+      this.houseService.getHouseList();
       this.toastr.success('New Record Added', 'House registered');
+    // tslint:disable-next-line:semicolon
+    })
+  } else {
+    this.houseService.putHouse(form.value.Id, form.value)
+    .subscribe(data => {
+      this.resetForm(form);
+      this.houseService.getHouseList();
+      this.toastr.info('Record updated', 'House register');
     });
   }
+  }
+
 }

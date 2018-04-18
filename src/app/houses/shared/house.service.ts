@@ -15,6 +15,12 @@ export class HouseService {
     const requestOptions = new RequestOptions({method : RequestMethod.Post, headers : headerOptions});
    return this.http.post('http://localhost:51060/api/house', body, requestOptions).map(x => x.json());
   }
+  putHouse(id, hos) {
+    const body = JSON.stringify(hos); // why i cant use var and let instead of const here?
+    const headerOptions = new Headers({'Convert-Type': 'application/json'});
+    const requestOptions = new RequestOptions({method : RequestMethod.Put, headers : headerOptions});
+   return this.http.post('http://localhost:51060/api/house' + id, body, requestOptions).map(x => x.json());
+  }
     getHouseList() {
       this.http.get('http://localhost:51060/api/house')
       .map((data: Response) => {

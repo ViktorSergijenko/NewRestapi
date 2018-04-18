@@ -13,5 +13,7 @@ export class HouseListComponent implements OnInit {
   ngOnInit() {
     this.houseService.getHouseList();
   }
-
+    showForedit(hos: House) {
+      this.houseService.selectedHouse = Object.assign({}, hos);
+    }
 }
