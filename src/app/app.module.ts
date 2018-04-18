@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { HousesComponent } from './houses/houses.component';
 import { HouseComponent } from './houses/house/house.component';
 import { HouseListComponent } from './houses/house-list/house-list.component';
+import {ToastrModule} from 'ngx-toastr';
 
 
 
@@ -22,7 +23,8 @@ import { HouseListComponent } from './houses/house-list/house-list.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    ToastrModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

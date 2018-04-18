@@ -11,6 +11,7 @@ export class HouseListComponent implements OnInit {
   constructor(private houseService: HouseService) { }
 
   ngOnInit() {
+    this.houseService.getHouseList();
   }
 
 }

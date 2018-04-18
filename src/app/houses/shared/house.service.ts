@@ -7,6 +7,7 @@ import 'rxjs/add/operator/toPromise';
 @Injectable()
 export class HouseService {
   selectedHouse: House;
+  houseList: House[];
   constructor(private http: Http) { }
   postHouse(hos: House) {
     const body = JSON.stringify(hos); // why i cant use var and let instead of const here?
@@ -14,5 +15,12 @@ export class HouseService {
     const requestOptions = new RequestOptions({method : RequestMethod.Post, headers : headerOptions});
    return this.http.post('http://localhost:51060/api/house', body, requestOptions).map(x => x.json());
   }
-
+    getHouseList() {
+      this.http.get('http://localhost:51060/api/house')
+      .map((data: Response) => {
+        return data.json() as House[];
+      }).toPromise().then(x => {
+        this.houseList = x;
+      });
+    }
 }

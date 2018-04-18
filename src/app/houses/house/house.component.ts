@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {HouseService} from '../shared/house.service';
 import { NgForm } from '@angular/forms';
+import {ToastrService} from 'ngx-toastr';
 @Component({
   selector: 'app-house',
   templateUrl: './house.component.html',
@@ -8,7 +9,7 @@ import { NgForm } from '@angular/forms';
 })
 export class HouseComponent implements OnInit {
 
-  constructor(private houseService: HouseService) { }
+  constructor(private houseService: HouseService, private toastr: ToastrService) { }
 
   ngOnInit() {
     this.resetForm();
@@ -31,6 +32,7 @@ resetForm(form?: NgForm) {
     this.houseService.postHouse(form.value)
     .subscribe( data => {
       this.resetForm(form);
+      this.toastr.success('New Record Added', 'House registered');
     });
   }
 }

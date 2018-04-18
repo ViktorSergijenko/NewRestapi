@@ -1,3 +1,14 @@
-<p>
-  house-list works!
-</p>
+<table class="table table-sm table-hover">
+  <tr *ngFor="let house of houseService.houseList">
+    <td>{{house.Street}} - {{house.City}} - {{house.Country}}</td>
+    <td>{{house.Postindex}}</td>
+    <td>
+      <a class="btn">
+        <i class="fa fa-pencil-square-o"></i>
+      </a>
+      <a class="btn text-danger">
+          <i class="fa fa-trash-o"></i>
+        </a>
+    </td>
+  </tr>
+</table>
