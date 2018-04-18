@@ -3,13 +3,16 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
-import { HouseComponent } from './houses/houses.component';
+import { HousesComponent } from './houses/houses.component';
+import { HouseComponent } from './houses/house/house.component';
 import { HouseListComponent } from './houses/house-list/house-list.component';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    HousesComponent,
     HouseComponent,
     HouseListComponent
   ],
