@@ -29,4 +29,7 @@ export class HouseService {
         this.houseList = x;
       });
     }
+    deleteHouse(id: number) {
+      return this.http.delete('http://localhost:51060/api/house/' + id).map(res => res.json());
+    }
 }
