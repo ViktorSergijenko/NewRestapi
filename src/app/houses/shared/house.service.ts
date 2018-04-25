@@ -10,19 +10,19 @@ export class HouseService {
   houseList: House[];
   constructor(private http: Http) { }
   postHouse(hos: House) {
-    const body = JSON.stringify(hos); // why i cant use var and let instead of const here?
-    const headerOptions = new Headers({'Convert-Type': 'application/json'});
-    const requestOptions = new RequestOptions({method : RequestMethod.Post, headers : headerOptions});
-   return this.http.post('http://localhost:51060/api/house', body, requestOptions).map(x => x.json());
+    var body = JSON.stringify(hos); // why i cant use var and let instead of var here?
+    var headerOptions = new Headers({'Content-Type': 'application/json'});
+    var requestOptions = new RequestOptions({method : RequestMethod.Post, headers : headerOptions});
+   return this.http.post('http://localhost:52414/api/House', body, requestOptions).map(x => x.json());
   }
   putHouse(id, hos) {
-    const body = JSON.stringify(hos); // why i cant use var and let instead of const here?
-    const headerOptions = new Headers({'Convert-Type': 'application/json'});
-    const requestOptions = new RequestOptions({method : RequestMethod.Put, headers : headerOptions});
-   return this.http.post('http://localhost:51060/api/house' + id, body, requestOptions).map(x => x.json());
+    var body = JSON.stringify(hos); // why i cant use var and let instead of var here?
+    var headerOptions = new Headers({'Content-Type': 'application/json'});
+    var requestOptions = new RequestOptions({method : RequestMethod.Put, headers : headerOptions});
+   return this.http.put('http://localhost:52414/api/House' + id, body, requestOptions).map(x => x.json());
   }
     getHouseList() {
-      this.http.get('http://localhost:51060/api/house')
+      this.http.get('http://localhost:52414/api/House')
       .map((data: Response) => {
         return data.json() as House[];
       }).toPromise().then(x => {
@@ -30,6 +30,6 @@ export class HouseService {
       });
     }
     deleteHouse(id: number) {
-      return this.http.delete('http://localhost:51060/api/house/' + id).map(res => res.json());
+      return this.http.delete('http://localhost:52414/api/House/' + id).map(res => res.json());
     }
 }

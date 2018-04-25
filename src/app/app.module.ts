@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 // tslint:disable-next-line:import-spacing
 import {FormsModule} from'@angular/forms';
 import {HttpModule} from '@angular/http';
-
+import { TitleCasePipe } from '@angular/common';
 
 import { AppComponent } from './app.component';
 import { HousesComponent } from './houses/houses.component';

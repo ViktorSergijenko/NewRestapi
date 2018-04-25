@@ -1,12 +1,12 @@
 <table class="table table-sm table-hover">
   <tr *ngFor="let house of houseService.houseList">
-    <td>{{house.Street}} - {{house.City}} - {{house.Country}}</td>
-    <td>{{house.Postindex}}</td>
+    <td>{{house.street}} - {{house.city}} - {{house.country}}</td>
+    <td>{{house.postindex}}</td>
     <td>
       <a class="btn" (click)="showForEdit(house)">
         <i class="fa fa-pencil-square-o"></i>
       </a>
-      <a class="btn text-danger" (click)="onDelete(house.House)">
+      <a class="btn text-danger" (click)="onDelete(house.id)">
           <i class="fa fa-trash-o"></i>
         </a>
     </td>

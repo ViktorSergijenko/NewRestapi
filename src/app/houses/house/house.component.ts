@@ -4,6 +4,7 @@ import { NgForm } from '@angular/forms';
 import {ToastrService} from 'ngx-toastr';
 @Component({
   selector: 'app-house',
+  providers : [HouseService],
   templateUrl: './house.component.html',
   styleUrls: ['./house.component.css']
 })
@@ -19,14 +20,12 @@ resetForm(form?: NgForm) {
   if (form != null)
   form.reset();
   this.houseService.selectedHouse = {
-    Id : null,
-    Street : '',
-    City : '',
-    Country : '',
-    Created : null,
-    Postindex : '',
-    Modified : null
-  };
+    id : null,
+    street : '',
+    city : '',
+    country : '',
+    postindex : ''
+  }
  }
  onSubmit(form: NgForm) {
    // tslint:disable-next-line:curly
@@ -39,7 +38,7 @@ resetForm(form?: NgForm) {
     // tslint:disable-next-line:semicolon
     })
   } else {
-    this.houseService.putHouse(form.value.Id, form.value)
+    this.houseService.putHouse(form.value.id, form.value)
     .subscribe(data => {
       this.resetForm(form);
       this.houseService.getHouseList();

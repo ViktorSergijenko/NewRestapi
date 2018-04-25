@@ -15,7 +15,7 @@ export class HouseListComponent implements OnInit {
     this.houseService.getHouseList();
   }
     showForedit(hos: House) {
-      this.houseService.selectedHouse = Object.assign({}, hos);
+      this.houseService.selectedHouse = Object.assign({}, hos);;
     }
     onDelete(id: number) {
       if (confirm('Are you sure to delete this record ?') === true) {
@@ -23,7 +23,7 @@ export class HouseListComponent implements OnInit {
       .subscribe(x => {
         this.houseService.getHouseList();
         this.toastr.warning('Deleted :)', 'House Register');
-      });
+      })
       }
      }
 }
