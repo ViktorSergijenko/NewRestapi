@@ -1,5 +1,6 @@
-<form  class="emp-form" #houseForm="ngForm" (ngSubmit)="onSubmit(houseForm)">
-    <input  type="hidden" class="form-control" name="id" #id="ngModel" [(ngModel)]="houseService.selectedHouse.id">
+
++<form  class="emp-form" #houseForm="ngForm" (ngSubmit)="onSubmit(houseForm)">
+    <input  type="hidden"  name="id" #id="ngModel" [(ngModel)]="houseService.selectedHouse.id">
 <div class="form-row">
   <div class="form-group col-md-6">
     <input  class="form-control" name="street" #street="ngModel" [(ngModel)]="houseService.selectedHouse.street" placeholder="street" required>

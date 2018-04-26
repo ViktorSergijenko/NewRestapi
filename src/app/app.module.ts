@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import {FormsModule} from'@angular/forms';
 import {HttpModule} from '@angular/http';
 import { TitleCasePipe } from '@angular/common';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { HousesComponent } from './houses/houses.component';
 import { HouseComponent } from './houses/house/house.component';
@@ -21,6 +21,7 @@ import {ToastrModule} from 'ngx-toastr';
     HouseListComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     FormsModule,
     HttpModule,

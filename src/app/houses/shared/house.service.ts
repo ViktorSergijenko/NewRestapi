@@ -19,7 +19,7 @@ export class HouseService {
     var body = JSON.stringify(hos); // why i cant use var and let instead of var here?
     var headerOptions = new Headers({'Content-Type': 'application/json'});
     var requestOptions = new RequestOptions({method : RequestMethod.Put, headers : headerOptions});
-   return this.http.put('http://localhost:52414/api/House' + id, body, requestOptions).map(x => x.json());
+   return this.http.put('http://localhost:52414/api/House/' + id, body, requestOptions).map(x => x.json());
   }
     getHouseList() {
       this.http.get('http://localhost:52414/api/House')
