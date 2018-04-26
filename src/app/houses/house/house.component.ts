@@ -20,7 +20,7 @@ resetForm(form?: NgForm) {
   if (form != null)
   form.reset();
   this.houseService.selectedHouse = {
-    id : null,
+    id : 0,
     street : '',
     city : '',
     country : '',
