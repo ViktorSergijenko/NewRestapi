@@ -10,6 +10,8 @@ import { HousesComponent } from './houses/houses.component';
 import { HouseComponent } from './houses/house/house.component';
 import { HouseListComponent } from './houses/house-list/house-list.component';
 import {ToastrModule} from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 
 
@@ -21,6 +23,7 @@ import {ToastrModule} from 'ngx-toastr';
     HouseListComponent
   ],
   imports: [
+    BrowserAnimationsModule,
     HttpClientModule,
     BrowserModule,
     FormsModule,

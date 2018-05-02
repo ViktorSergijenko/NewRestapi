@@ -1,6 +1,11 @@
 
-+<form  class="emp-form" #houseForm="ngForm" (ngSubmit)="onSubmit(houseForm)">
-    <input  type="hidden"  name="id" #id="ngModel" [(ngModel)]="houseService.selectedHouse.id">
++
+<pre class="code">
+  {{houseService.selectedHouse | json}}
+</pre>
+
+<form  class="emp-form" #houseForm="ngForm" (ngSubmit)="onSubmit(houseForm)">
+    <input  type="hidden"  *ngIf="houseService.selectedHouse && houseService.selectedHouse.id" name="id" #id="ngModel" [(ngModel)]="houseService.selectedHouse.id">
 <div class="form-row">
   <div class="form-group col-md-6">
     <input  class="form-control" name="street" #street="ngModel" [(ngModel)]="houseService.selectedHouse.street" placeholder="street" required>

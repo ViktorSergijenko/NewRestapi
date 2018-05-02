@@ -15,7 +15,9 @@ export class HouseListComponent implements OnInit {
     this.houseService.getHouseList();
   }
     showForedit(hos: House) {
-      this.houseService.selectedHouse = Object.assign({}, hos);;
+      
+      // nuzno dlja togo wtobi izmenenija v objekte sohranjalisj ne srazu
+      this.houseService.selectedHouse = hos;
     }
     onDelete(id: number) {
       if (confirm('Are you sure to delete this record ?') === true) {
