@@ -13130,11 +13130,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\PC\\Desktop\\TESTAPI\\TESTAPI\\TESTAPI.csproj",
+      "projectUniqueName": "C:\\Users\\PC\\Desktop\\RestApi\\TESTAPI\\TESTAPI\\TESTAPI.csproj",
       "projectName": "TESTAPI",
-      "projectPath": "C:\\Users\\PC\\Desktop\\TESTAPI\\TESTAPI\\TESTAPI.csproj",
+      "projectPath": "C:\\Users\\PC\\Desktop\\RestApi\\TESTAPI\\TESTAPI\\TESTAPI.csproj",
       "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\PC\\Desktop\\TESTAPI\\TESTAPI\\obj\\",
+      "outputPath": "C:\\Users\\PC\\Desktop\\RestApi\\TESTAPI\\TESTAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

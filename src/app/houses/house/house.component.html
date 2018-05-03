@@ -16,7 +16,7 @@
     
     <div class="validation-error" *ngIf="city.invalid && city.touched">This field is Required</div>
   </div>
-  <div class="form-group">
+  <div class="form-group col-md-6">
     <input  class="form-control" name="country" #country="ngModel" [(ngModel)]="houseService.selectedHouse.country" placeholder="country" required>
     <div class="validation-error" *ngIf="country.invalid && country.touched">This field is Required</div>
   </div>
