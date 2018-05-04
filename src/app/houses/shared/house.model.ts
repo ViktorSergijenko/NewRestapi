@@ -7,7 +7,7 @@ export class House {
       city: string;
       country: string;
       postindex: string;
-      flats:Flat;
+      flats:Flat[];
   }
 
   export class Flat {
