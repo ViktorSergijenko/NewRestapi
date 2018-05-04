@@ -26,7 +26,9 @@ export class HouseComponent implements OnInit {
       street: '',
       city: '',
       country: '',
-      postindex: ''
+      postindex: '',
+      flats: null
+      
     }
   }
   onSubmit(form: NgForm) {
