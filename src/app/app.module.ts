@@ -11,9 +11,9 @@ import { HouseComponent } from './houses/house/house.component';
 import { HouseListComponent } from './houses/house-list/house-list.component';
 import {ToastrModule} from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FlatsComponent } from './flats/flats/flats.component';
+import { FlatsComponent } from './flats/flats.component';
 import { FlatComponent } from './flats/flat/flat.component';
-import { FlatListComponent } from './flats/flat-list/flat-list.component';
+import { FlatsListComponent } from './flats/flats-list/flats-list.component';
 
 
 
@@ -26,7 +26,8 @@ import { FlatListComponent } from './flats/flat-list/flat-list.component';
     HouseListComponent,
     FlatsComponent,
     FlatComponent,
-    FlatListComponent
+    FlatsListComponent,
+  
   ],
   imports: [
     BrowserAnimationsModule,
