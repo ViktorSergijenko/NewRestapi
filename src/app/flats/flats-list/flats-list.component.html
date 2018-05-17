@@ -1,3 +1,14 @@
-<p>
-  flats-list works!
-</p>
+<table class="table table-sm table-hover">
+  <tr *ngFor="let house of houseService.houseList">
+    <td>{{flat.floor}} - {{flat.number}} - {{flat.totalarea}}</td>
+    <td>{{house.postindex}}</td>
+    <td>
+      <a class="btn" (click)="showForedit(house)">
+        <i class="fa fa-pencil-square-o"></i>
+      </a>
+      <a class="btn text-danger" (click)="onDelete(house.id)">
+          <i class="fa fa-trash-o"></i>
+        </a>
+    </td>
+  </tr>
+</table>

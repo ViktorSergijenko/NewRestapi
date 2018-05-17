@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {FlatService} from '../shared/flat.service';
 
 @Component({
   selector: 'app-flats-list',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FlatsListComponent implements OnInit {
 
-  constructor() { }
+  constructor(private flatService : FlatService) { }
 
   ngOnInit() {
   }
