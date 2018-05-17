@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FlatService} from '../shared/flat.service';
+import { NgForm } from '@angular/forms';
 @Component({
   selector: 'app-flat',
   templateUrl: './flat.component.html',
@@ -11,20 +12,20 @@ export class FlatComponent implements OnInit {
 
   ngOnInit() {
   }
-  // resetForm(form?: NgForm) {
-  //   // tslint:disable-next-line:curly
-  //   if (form != null)
-  //     form.reset();
-  //   this.houseService.selectedHouse = {
-  //     id: null,
-  //     floor: null,
-  //     number: null,
-  //     totalarea: null,
-  //     livingspace: null,
-  //     houseid: null
+  resetForm(form: NgForm) {
+    // tslint:disable-next-line:curly
+    if (form != null)
+      form.reset();
+    this.flatService.selectedFlat = {
+      id: null,
+      floor: null,
+      number: null,
+      totalarea: null,
+      livingspace: null,
+      houseid: null
       
-  //   }
-  // }
+    }
+  }
   // onSubmit(form: NgForm) {
   //   if (!form.value.id) {
   //     this.houseService.postHouse(form.value)
