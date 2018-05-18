@@ -11,6 +11,7 @@ export class FlatsListComponent implements OnInit {
   constructor(private flatService : FlatService) { }
 
   ngOnInit() {
+    this.flatService.getFlatList();
   }
 
 }

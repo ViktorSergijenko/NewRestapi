@@ -10,9 +10,10 @@ import { Flat } from '../shared/flat.model';
 })
 export class FlatComponent implements OnInit {
 
-  constructor(private flatService : FlatService) { }
+  constructor(private flatService : FlatService,private toastr: ToastrService) { }
 
   ngOnInit() {
+    this.flatService.selectedFlat = new Flat();
   }
   resetForm(form: NgForm) {
     // tslint:disable-next-line:curly
@@ -28,21 +29,22 @@ export class FlatComponent implements OnInit {
       
     }
   }
-  // onSubmit(form: NgForm) {
-  //   if (!form.value.id) {
-  //     this.houseService.postHouse(form.value)
-  //       .subscribe(data => {
-  //         this.resetForm(form);
-  //         this.houseService.getHouseList();
-  //         this.toastr.success('New Record Added', 'House registered');
-  //       })
-  //   } 
-  //   else {
-  //     this.houseService.putHouse(form.value.id, form.value)
-  //       .subscribe(data => {
-  //         this.resetForm(form);
-  //         this.houseService.getHouseList();
-  //         this.toastr.info('Record updated', 'House register');
-  //       });
-  //   }
+  onSubmit(form: NgForm) {
+    if (!form.value.id) {
+      this.flatService.postFlat(form.value)
+        .subscribe(data => {
+          this.resetForm(form);
+          this.flatService.getFlatList();
+          this.toastr.success('New Record Added', 'Flat registered');
+        })
+    } 
+    else {
+      this.flatService.putFlat(form.value.id, form.value)
+        .subscribe(data => {
+          this.resetForm(form);
+          this.flatService.getFlatList();
+          this.toastr.info('Record updated', 'House register');
+        });
+    }
+  }
 }
