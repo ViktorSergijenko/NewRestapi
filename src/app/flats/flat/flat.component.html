@@ -1,9 +1,9 @@
-<form  class="emp-form" #FlatForm="ngForm" (ngSubmit)="onSubmit(flatForm)">
+<form  class="emp-form" #flatForm="ngForm" (ngSubmit)="onSubmit(flatForm)">
   <input  type="hidden"  *ngIf="flatService.selectedFlat && flatService.selectedFlat.id" name="id" #id="ngModel" [(ngModel)]="flatService.selectedFlat.id">
 <div class="form-row">
 <div class="form-group col-md-6">
   <input  class="form-control" name="floor" #floor="ngModel" [(ngModel)]="flatService.selectedFlat.floor" placeholder="floor" required>
-  <div class="validation-error" *ngIf="street.invalid && street.touched">This field is Required</div>
+  <div class="validation-error" *ngIf="floor.invalid && floor.touched">This field is Required</div>
 </div>
 <div class="form-group col-md-6">
   <input  class="form-control" name="number" #number="ngModel" [(ngModel)]="flatService.selectedFlat.number" placeholder="number" required> 

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {FlatService} from '../shared/flat.service';
 import { NgForm } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
+import { Flat } from '../shared/flat.model';
 @Component({
   selector: 'app-flat',
   templateUrl: './flat.component.html',
