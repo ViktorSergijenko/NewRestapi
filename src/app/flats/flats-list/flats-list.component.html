@@ -1,7 +1,7 @@
 <table class="table table-sm table-hover">
   <tr *ngFor="let flat of flatService.flatList">
     <td>{{flat.floor}} - {{flat.number}} - {{flat.totalarea}}</td>
-    <td>{{flat.postindex}} - {{flat.houseid}}</td>
+    <td>{{flat.livingspace}} - {{flat.houseid}}</td>
     <td>
       <a class="btn" (click)="showForedit(flat)">
         <i class="fa fa-pencil-square-o"></i>
