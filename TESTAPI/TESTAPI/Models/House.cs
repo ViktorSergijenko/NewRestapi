@@ -22,7 +22,10 @@ namespace TESTAPI.Models
     }
     public class Flat
     {
-
+        public Flat()
+        {
+          residents = new List<Resident>();
+        }
         public int id { get; set; }//dlja chevo tut set i get esli oni po idei rabotajut s privat poljami
         public int floor { get; set; }
         public int number { get; set; }

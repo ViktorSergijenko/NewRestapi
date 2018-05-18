@@ -12,7 +12,7 @@ namespace RestAndPeace.Models
         public HouseContext(DbContextOptions<HouseContext> options)
             : base(options)
         {
-            Database.EnsureDeleted();
+            //Database.EnsureDeleted();
             Database.EnsureCreated();
             //System.Data.SqlClient.SqlException: 'Database 'EFProviders.InMemory' already exists. Choose a different database name.'
 
