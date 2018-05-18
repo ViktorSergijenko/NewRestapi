@@ -1,7 +1,7 @@
 <table class="table table-sm table-hover">
   <tr *ngFor="let house of houseService.houseList">
-    <td>{{house.street}} - {{house.city}} - {{house.country}}</td>
-    <td>{{house.postindex}}</td>
+    <td>Street:{{house.street}} - City:{{house.city}} - Country:{{house.country}}</td>
+    <td>P.index:{{house.postindex}}</td>
     <td>
       <a class="btn" (click)="showForedit(house)">
         <i class="fa fa-pencil-square-o"></i>
