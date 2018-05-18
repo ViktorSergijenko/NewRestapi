@@ -30,6 +30,6 @@ export class FlatService {
       });
     }
     deleteFlat(id: number) {
-      return this.http.delete('http://localhost:52414/api/House/' + id).map(res => res.json());
+      return this.http.delete('http://localhost:52414/api/Flat/' + id).map(res => res.json());
     }
 }

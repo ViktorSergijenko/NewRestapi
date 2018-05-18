@@ -26,8 +26,8 @@ export class HouseComponent implements OnInit {
       street: '',
       city: '',
       country: '',
-      postindex: '',
-      flats: null
+      postindex: ''
+      
       
     }
   }
