@@ -1,17 +1,19 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using TESTAPI.Models;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Cors;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace RestAndPeace.Controllers
 {
     [Route("api/[controller]")]//[controller]???
-    public class FlatController : Controller
+    [EnableCors("AllowAnyOrigin")]
+  public class FlatController : Controller
     {
         private readonly HouseContext _context;
 
