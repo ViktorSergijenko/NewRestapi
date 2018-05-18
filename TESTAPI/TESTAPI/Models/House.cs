@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -30,5 +30,19 @@ namespace TESTAPI.Models
         public double livingspace { get; set; }
         public int houseid { get; set; }
         public House house { get; set; }
+        public List<Resident> residents { get; set; }
     }
+        public class Resident
+         {
+          public int id { get; set; }
+          public string firstname { get; set; }
+          public string lastname { get; set; }
+          public string postcode { get; set; }
+          public string phone { get; set; }
+          public string email { get; set; }
+          public int flatid { get; set; }
+          public Flat flat { get; set; }
+
+         }
+
 }

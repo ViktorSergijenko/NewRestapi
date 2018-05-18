@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using TESTAPI.Models;
@@ -25,10 +25,11 @@ namespace TESTAPI.Controllers
         [HttpGet]
         public IEnumerable<House> GetAll()
         {
-            Init();
 
+           Init();
             var houses = _context.Houses
                 .Include(x => x.flats)
+                .ThenInclude(x => x.residents)
                 .ToList();
 
             return houses;
@@ -40,6 +41,7 @@ namespace TESTAPI.Controllers
 
             return _context.Houses
                 .Include(x => x.flats)
+                .ThenInclude(x => x.residents)
                 .FirstOrDefault(t => t.id == id);
 
         }
@@ -57,8 +59,12 @@ namespace TESTAPI.Controllers
                     {
                         var newFlat = new Flat { number = flatInc, floor = r.Next(1, 5), livingspace = r.Next(100, 300) / 11, totalarea = r.Next(100, 300) / 9};
 
-                        
-                        newHouse.flats.Add(newFlat);
+                          for (int resInc = 0; resInc < 2; resInc++)
+                          {
+                            newFlat.residents.Add(new Resident { firstname = $"Some-{resInc}", lastname = "Dude" });
+
+                          }
+                          newHouse.flats.Add(newFlat);
                     }
 
 

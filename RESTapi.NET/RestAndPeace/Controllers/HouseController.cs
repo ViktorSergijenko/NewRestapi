@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using RestAndPeace.Models;
@@ -54,15 +54,15 @@ namespace RestAndPeace.Controllers
             {
                 for (int houseInc = 0; houseInc < 2; houseInc++)
                 {
-                    var newHouse = new House { Street = $"Liela Iela-{houseInc}", City = "Jelgava City", Country = "Latvia", Postindex = $"LV300{houseInc}", Created = DateTime.Now, Modified = DateTime.Now };
+                    var newHouse = new House { Street = $"Liela Iela-{houseInc}", City = "Jelgava City", Country = "Latvia", Postindex = $"LV300{houseInc}" };
 
                     for (int flatInc = 0; flatInc < 2; flatInc++)
                     {
-                        var newFlat = new Flat { Number = flatInc, Floor = r.Next(1, 5), LivingSpace = r.Next(100, 300) / 11, TotalArea = r.Next(100, 300) / 9, Created = DateTime.Now, Modified = DateTime.Now };
+                        var newFlat = new Flat { Number = flatInc, Floor = r.Next(1, 5), LivingSpace = r.Next(100, 300) / 11, TotalArea = r.Next(100, 300) / 9 };
                         
                         for (int resInc = 0; resInc < 2; resInc++)
                         {
-                            newFlat.Residents.Add(new Resident { FirstName = $"Some-{resInc}", LastName = "Dude", Created = DateTime.Now, Modified = DateTime.Now });
+                            newFlat.Residents.Add(new Resident { FirstName = $"Some-{resInc}", LastName = "Dude" });
 
                         }
                         newHouse.Flats.Add(newFlat);
@@ -105,7 +105,8 @@ namespace RestAndPeace.Controllers
             House.City = item.City;
             House.Country = item.Country;
             House.Postindex = item.Postindex;
-            House.Modified = DateTime.Now;
+      
+            //House.Modified = DateTime.Now;
             _context.Houses.Update(House);
             _context.SaveChanges();
             return new NoContentResult();

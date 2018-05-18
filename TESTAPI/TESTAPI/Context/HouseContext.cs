@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -11,7 +11,7 @@ namespace TESTAPI.Models
         public HouseContext(DbContextOptions<HouseContext> options)
            : base(options)
         {
-          // Database.EnsureDeleted();
+          Database.EnsureDeleted();
             Database.EnsureCreated();
             //System.Data.SqlClient.SqlException: 'Database 'EFProviders.InMemory' already exists. Choose a different database name.'
 
@@ -25,11 +25,19 @@ namespace TESTAPI.Models
                 .IsRequired()
                 .OnDelete(DeleteBehavior.Cascade)
             ;
-            
+                modelBuilder.Entity<Flat>()
+                  .HasMany(x => x.residents)
+                  .WithOne(x => x.flat)
+                  .HasForeignKey(x => x.flatid)
+                  .IsRequired()
+                  .OnDelete(DeleteBehavior.Cascade)
+              ;
 
-            base.OnModelCreating(modelBuilder);
+
+      base.OnModelCreating(modelBuilder);
         }
         public DbSet<House> Houses { get; set; }
         public DbSet<Flat> flats { get; set; }
-    }
+        public DbSet<Resident> residents { get; set; }
+  }
 }

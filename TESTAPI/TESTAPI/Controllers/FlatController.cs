@@ -26,15 +26,17 @@ namespace RestAndPeace.Controllers
         public IEnumerable<Flat> GetAll()
         {
             return _context.flats
-                .Include(x => x.house);
-                
-        }
+                .Include(x => x.house)
+                .Include(x => x.residents);
+
+    }
 
         [HttpGet("{id}", Name = "GetFlat")]
         public Flat GetById(long id)
         {
             return _context.flats
                 .Include(x => x.house)
+                .Include(x => x.residents)
                 .FirstOrDefault(t => t.id == id);
         }
 

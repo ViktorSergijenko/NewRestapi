@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using RestAndPeace.Models;
@@ -77,6 +77,7 @@ namespace RestAndPeace.Controllers
             res.PostCode = item.PostCode;
             res.Phone = item.Phone;
             res.FlatId = item.FlatId;
+            res.Email = item.Email;
             //res.Flat = item.Flat;
             //res.BirdthDay = item.BirdthDay;
             

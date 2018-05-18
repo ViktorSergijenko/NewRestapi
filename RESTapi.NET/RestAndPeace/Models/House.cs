@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,8 +16,8 @@ namespace RestAndPeace.Models
         public string City { get; set; }
         public string Country { get; set; }
         public string Postindex { get; set; }
-        public DateTime Created { get; set; }
-        public DateTime Modified { get; set; }
+       // public DateTime Created { get; set; }
+       // public DateTime Modified { get; set; }
         public List<Flat> Flats { get; set; }
         
     }
@@ -33,8 +33,8 @@ namespace RestAndPeace.Models
         public double TotalArea { get; set; }
         public double LivingSpace { get; set; }
         public int HouseId { get; set; }
-        public DateTime Created { get; set; }
-        public DateTime Modified { get; set; }
+        //public DateTime Created { get; set; }
+       // public DateTime Modified { get; set; }
         public House House { get; set; }
         public List<Resident> Residents { get; set; }
         //public int SVJAYJ { get; set; }????ne mogu ponjatj kak svjazatj s domom        
@@ -48,8 +48,8 @@ namespace RestAndPeace.Models
         public string PostCode { get; set; }
         public string Phone { get; set; }
         public string Email { get; set; }
-        public DateTime Created { get; set; }
-        public DateTime Modified { get; set; }
+       // public DateTime Created { get; set; }
+        //public DateTime Modified { get; set; }
         public int FlatId { get; set; }
         public Flat Flat { get; set; }
 

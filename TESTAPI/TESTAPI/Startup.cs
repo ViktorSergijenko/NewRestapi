@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -24,9 +24,11 @@ namespace TESTAPI
         public IConfiguration Configuration { get; }
         public void ConfigureServices(IServiceCollection services)
         {
-            //services.AddDbContext<HouseContext>(opt => opt.UseInMemoryDatabase("HouseList"));
-            services.AddDbContext<HouseContext>(opt => opt.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=ProjectV13;Trusted_Connection=True;"));
+      
+      //services.AddDbContext<HouseContext>(opt => opt.UseInMemoryDatabase("HouseList"));
+      services.AddDbContext<HouseContext>(opt => opt.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=ProjectV13;Trusted_Connection=True;"));
             services.AddMvc()
+            
                 .AddJsonOptions(o => o.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
             services.AddCors(options =>
             {
