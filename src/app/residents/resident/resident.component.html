@@ -2,30 +2,35 @@
   <input  type="hidden"  *ngIf="residentService.selectedResident && residentService.selectedResident.id" name="id" #id="ngModel" [(ngModel)]="residentService.selectedResident.id">
 <div class="form-row">
 <div class="form-group col-md-6">
-  <input  class="form-control" name="floor" #floor="ngModel" [(ngModel)]="residentService.selectedResident.floor" placeholder="floor" required>
-  <div class="validation-error" *ngIf="floor.invalid && floor.touched">This field is Required</div>
+  <input  class="form-control" name="firstname" #firstname="ngModel" [(ngModel)]="residentService.selectedResident.firstname" placeholder="firstname" required>
+  <div class="validation-error" *ngIf="firstname.invalid && firstname.touched">This field is Required</div>
 </div>
 <div class="form-group col-md-6">
-  <input  class="form-control" name="number" #number="ngModel" [(ngModel)]="residentService.selectedResident.number" placeholder="number" required> 
+  <input  class="form-control" name="lastname" #lastname="ngModel" [(ngModel)]="residentService.selectedResident.lastname" placeholder="lastname" required> 
   
-  <div class="validation-error" *ngIf="number.invalid && number.touched">This field is Required</div>
+  <div class="validation-error" *ngIf="lastname.invalid && lastname.touched">This field is Required</div>
+</div>
+<div class="form-group col-md-6">
+  <input  class="form-control" name="postcode" #postcode="ngModel" [(ngModel)]="residentService.selectedResident.postcode" placeholder="postcode" required> 
+  
+  <div class="validation-error" *ngIf="postcode.invalid && postcode.touched">This field is Required</div>
+</div>
+<div class="form-group col-md-6">
+  <input  class="form-control" name="phone" #phone="ngModel" [(ngModel)]="residentService.selectedResident.phone " placeholder="phone">
+</div>
 </div>
 
+  <div class="form-group">
+  <input  class="form-control" name="flatid" #flatid="ngModel" [(ngModel)]="residentService.selectedResident.flatid" placeholder="flatid" required> 
+  
+  <div class="validation-error" *ngIf="flatid.invalid && flatid.touched">This field is Required</div>
 </div>
 <div class="form-group">
-  <input  class="form-control" name="totalarea" #totalarea="ngModel" [(ngModel)]="residentService.selectedResident.totalarea" placeholder="totalarea" required>
-  <div class="validation-error" *ngIf="totalarea.invalid && totalarea.touched">This field is Required</div>
+  <input  class="form-control" name="email" #email="ngModel" [(ngModel)]="residentService.selectedResident.houseid" placeholder="email" required> 
+  
+  <div class="validation-error" *ngIf="email.invalid && email.touched">This field is Required</div>
 </div>
 <div class="form-row">
-<div class="form-group col-md-6">
-  <input  class="form-control" name="livingspace" #livingspace="ngModel" [(ngModel)]="residentService.selectedResident.livingspace " placeholder="livingspace">
-</div>
-<div class="form-group col-md-6">
-  <input  class="form-control" name="houseid" #houseid="ngModel" [(ngModel)]="residentService.selectedResident.houseid" placeholder="houseid" required> 
-  
-  <div class="validation-error" *ngIf="houseid.invalid && houseid.touched">This field is Required</div>
-</div>
-
 <div class="form-group col-md-8">
   <button [disabled]="!residentForm.valid" type="submit" class="btn btn-lg btn-block btn-info"><i class="fa fa-save"></i> Submit</button>
 </div>
@@ -33,4 +38,5 @@
   <button type="button" class="btn btn-lg btn-block btn-secondary"(click)="resetForm(residentForm)"><i class="fas fa-redo"></i> Reset</button>
 </div>
 </div>
+
 </form> 

@@ -1,3 +1,14 @@
-<p>
-  resident-list works!
-</p>
+<table class="table table-sm table-hover">
+  <tr *ngFor="let resident of residentService.residentList">
+    <td>Name:{{resident.firstname}} - Surname:{{resident.lastname}} - P.Code:{{resident.postcode}}</td>
+    <td>Phone:{{resident.phone}} - Email:{{resident.email}} - FlatId: {{resident.flatid}}</td>
+    <td>
+      <a class="btn" (click)="showForedit(resident)">
+        <i class="fa fa-pencil-square-o"></i>
+      </a>
+      <a class="btn text-danger" (click)="onDelete(resident.id)">
+          <i class="fa fa-trash-o"></i>
+        </a>
+    </td>
+  </tr>
+</table>
