@@ -14,6 +14,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlatsComponent } from './flats/flats.component';
 import { FlatComponent } from './flats/flat/flat.component';
 import { FlatsListComponent } from './flats/flats-list/flats-list.component';
+import { ResidentsComponent } from './residents/residents.component';
+import { ResidentComponent } from './residents/resident/resident.component';
+import { ResidentListComponent } from './residents/resident-list/resident-list.component';
 
 
 
@@ -27,6 +30,9 @@ import { FlatsListComponent } from './flats/flats-list/flats-list.component';
     FlatsComponent,
     FlatComponent,
     FlatsListComponent,
+    ResidentsComponent,
+    ResidentComponent,
+    ResidentListComponent,
   
   ],
   imports: [
