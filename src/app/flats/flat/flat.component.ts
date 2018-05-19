@@ -43,7 +43,7 @@ export class FlatComponent implements OnInit {
         .subscribe(data => {
           this.resetForm(form);
           this.flatService.getFlatList();
-          this.toastr.info('Record updated', 'House register');
+          this.toastr.info('Record updated', 'Flat info was changed');
         });
     }
   }
