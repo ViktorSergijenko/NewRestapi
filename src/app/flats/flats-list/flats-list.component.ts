@@ -19,6 +19,9 @@ export class FlatsListComponent implements OnInit {
     // nuzno dlja togo wtobi izmenenija v objekte sohranjalisj ne srazu
     this.flatService.selectedFlat = Object.assign({}, fla);
   }
+  ShowInfo(houseid: number){
+    this.flatService.getHouseList(houseid);
+  }
   onDelete(id: number) {
     if (confirm('Are you sure to delete this record ?') === true) {
     this.flatService.deleteFlat(id)

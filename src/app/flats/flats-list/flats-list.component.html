@@ -9,6 +9,16 @@
       <a class="btn text-danger" (click)="onDelete(flat.id)">
           <i class="fa fa-trash-o"></i>
         </a>
+        <a class="btn">
+          <i class="fa fa-arrow-circle-o-down" (click)="ShowInfo(flat.houseid)"></i>
+        </a>
     </td>
+  </tr>
+</table>
+
+<table class="table table-sm table-hover">
+  <tr *ngFor="let house of flatService.houseList">
+    <td> Street:{{house.street}} - City:{{house.city}}</td>
+    <td>Country{{house.country}} - postindex:{{house.postindex}}</td>
   </tr>
 </table>

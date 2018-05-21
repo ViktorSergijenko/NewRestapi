@@ -17,9 +17,13 @@ import { FlatsListComponent } from './flats/flats-list/flats-list.component';
 import { ResidentsComponent } from './residents/residents.component';
 import { ResidentComponent } from './residents/resident/resident.component';
 import { ResidentListComponent } from './residents/resident-list/resident-list.component';
+import { RouterModule } from '@angular/router';
 
-
-
+const routes=[
+  {path: '', component: HousesComponent},
+  {path: 'flats', component: FlatsComponent},
+  {path: 'residents', component: ResidentsComponent}
+];
 
 @NgModule({
   declarations: [
@@ -41,7 +45,8 @@ import { ResidentListComponent } from './residents/resident-list/resident-list.c
     BrowserModule,
     FormsModule,
     HttpModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
