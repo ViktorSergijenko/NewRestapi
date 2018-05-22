@@ -24,6 +24,7 @@ export class FlatService {
     var requestOptions = new RequestOptions({method : RequestMethod.Put, headers : headerOptions});
    return this.http.put('http://localhost:52414/api/Flat/' + id, body, requestOptions).map(x => x.json());
   }
+    
     getFlatList() {
       this.http.get('http://localhost:52414/api/Flat')
       .map((data: Response) => {
@@ -32,12 +33,32 @@ export class FlatService {
         this.flatList = x;
       });
     }
+    //pri etoj on piwit eto: Uncaught (in promise): TypeError: Cannot read property 'id' of undefined
+    //TypeError: Cannot read property 'id' of undefined
     getHouseList(houseid: number) {
-      this.http.get('http://localhost:52414/api/House')
+      this.http.get('http://localhost:52414/api/House/' + houseid)
       .map((data: Response) => {
         if (houseid == this.selectedHouse.id) {
-          return data.json() as House[];
+          return data.json() as House;
         }}).toPromise().then(x => {
+        this.selectedHouse = x;
+      });
+    }
+    //pri ispolnenii etoj funkcii v konsoli vivodit owibku "cannot find a differ supporting object '[object Object]' of type 'object'. NgFor only supports binding to Iterables such as Arrays.''
+    getHouseList2(houseid: number) {
+      this.http.get('http://localhost:52414/api/House/'+ houseid)
+      .map((data: Response) => {
+       
+          return data.json() as House[];
+        }).toPromise().then(x => {
+        this.houseList = x;
+      });
+    }
+    getHouseListR() {
+      this.http.get('http://localhost:52414/api/House')
+      .map((data: Response) => {
+        return data.json() as House[];
+      }).toPromise().then(x => {
         this.houseList = x;
       });
     }

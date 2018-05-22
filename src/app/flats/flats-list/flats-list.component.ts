@@ -13,11 +13,15 @@ export class FlatsListComponent implements OnInit {
 
   ngOnInit() {
     this.flatService.getFlatList();
+    this.flatService.getHouseListR();
   }
   showForedit(fla: Flat) {
       
     // nuzno dlja togo wtobi izmenenija v objekte sohranjalisj ne srazu
     this.flatService.selectedFlat = Object.assign({}, fla);
+  }
+  ShowInfo2(houseid: number){
+    this.flatService.getHouseList2(houseid);
   }
   ShowInfo(houseid: number){
     this.flatService.getHouseList(houseid);
