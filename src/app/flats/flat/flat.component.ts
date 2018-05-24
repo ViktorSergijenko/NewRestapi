@@ -25,9 +25,22 @@ export class FlatComponent implements OnInit {
       number: null,
       totalarea: null,
       livingspace: null,
-      houseid: null
+      houseid: null,
+      house:null,
+      residents:null
       
     }
+  }
+  selectchange(args){
+    this.flatService.selectedHouse.id=args.target.id;
+  }
+
+  selectdrop(args){
+    this.flatService.selectedHouse.id=args.id;
+  }
+  selectChange1( $event) {
+    //In my case $event come with a id value
+    this.flatService.houseList1 = this.flatService.selectedHouse[$event];
   }
   onSubmit(form: NgForm) {
     if (!form.value.id) {

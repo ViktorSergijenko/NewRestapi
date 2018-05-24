@@ -13,6 +13,7 @@ export class ResidentListComponent implements OnInit {
 
   ngOnInit() {
     this.residentService.getResidentList();
+    this.residentService.getFlatList();
   }
   showForedit(resi: Resident) {
       

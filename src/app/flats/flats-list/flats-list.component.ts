@@ -14,7 +14,10 @@ export class FlatsListComponent implements OnInit {
   ngOnInit() {
     this.flatService.getFlatList();
     this.flatService.getHouseListR();
+    
   }
+  
+
   showForedit(fla: Flat) {
       
     // nuzno dlja togo wtobi izmenenija v objekte sohranjalisj ne srazu

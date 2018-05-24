@@ -1,3 +1,4 @@
+import { Flat } from '../../flats/shared/flat.model';
 export class House {
     /**
      * Creats a new house
@@ -7,7 +8,7 @@ export class House {
       city: string;
       country: string;
       postindex: string;
-      
+      flats:Flat[];
   }
 
   

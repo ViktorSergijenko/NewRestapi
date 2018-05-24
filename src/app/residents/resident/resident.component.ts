@@ -26,7 +26,8 @@ export class ResidentComponent implements OnInit {
       postcode: '',
       phone: '',
       email: '',
-      flatid:null
+      flatid:null,
+      flat:null
       
     }
   }

@@ -10,7 +10,7 @@ export class FlatService {
   selectedFlat : Flat;
   flatList: Flat[];
   selectedHouse : House;
-  houseList: House[];
+  houseList1: House[];
   constructor(private http: Http) { }
   postFlat(fla: Flat) {
     var body = JSON.stringify(fla); 
@@ -51,7 +51,7 @@ export class FlatService {
        
           return data.json() as House[];
         }).toPromise().then(x => {
-        this.houseList = x;
+        this.houseList1 = x;
       });
     }
     getHouseListR() {
@@ -59,7 +59,7 @@ export class FlatService {
       .map((data: Response) => {
         return data.json() as House[];
       }).toPromise().then(x => {
-        this.houseList = x;
+        this.houseList1 = x;
       });
     }
     deleteFlat(id: number) {

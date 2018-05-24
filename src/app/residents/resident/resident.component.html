@@ -21,8 +21,11 @@
 </div>
 
   <div class="form-group">
-  <input  class="form-control" name="flatid" #flatid="ngModel" [(ngModel)]="residentService.selectedResident.flatid" placeholder="flatid" required> 
+  <!--<input  class="form-control" name="flatid" #flatid="ngModel" [(ngModel)]="residentService.selectedResident.flatid" placeholder="flatid" required> -->
+  <select class="form-control" name="flatid" #flatid="ngModel"  [(ngModel)]="residentService.selectedResident.flatid"  placeholder="flatid" required>
   
+      <option [ngValue]="flat.id" *ngFor="let flat of residentService.flatList" >{{flat.id}}</option>
+      </select>
   <div class="validation-error" *ngIf="flatid.invalid && flatid.touched">This field is Required</div>
 </div>
 <div class="form-group">

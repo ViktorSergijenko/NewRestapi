@@ -21,8 +21,14 @@
   <input  class="form-control" name="livingspace" #livingspace="ngModel" [(ngModel)]="flatService.selectedFlat.livingspace " placeholder="livingspace">
 </div>
 <div class="form-group col-md-6">
-  <input  class="form-control" name="houseid" #houseid="ngModel" [(ngModel)]="flatService.selectedFlat.houseid" placeholder="houseid" required> 
+   <!-- <select ng-model="flatService.houseList1.id" ng-options="x.houseid for x in house"></select> -->
+ <!-- <input  class="form-control" name="houseid" #houseid="ngModel" [(ngModel)]="flatService.selectedFlat.houseid" placeholder="houseid" required>-->
+ 
+ <select class="form-control" name="houseid" #houseid="ngModel"  [(ngModel)]="flatService.selectedFlat.houseid"  placeholder="houseid" required>
   
+  <option [ngValue]="house.id" *ngFor="let house of flatService.houseList1" >{{house.id}}</option>
+  </select>
+ 
   <div class="validation-error" *ngIf="houseid.invalid && houseid.touched">This field is Required</div>
 </div>
 
