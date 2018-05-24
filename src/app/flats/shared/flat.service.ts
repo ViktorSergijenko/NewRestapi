@@ -5,7 +5,9 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/toPromise';
 import { House } from '../../houses/shared/house.model';
+
 @Injectable()
+
 export class FlatService {
   selectedFlat : Flat;
   flatList: Flat[];
@@ -49,9 +51,9 @@ export class FlatService {
       this.http.get('http://localhost:52414/api/House/'+ houseid)
       .map((data: Response) => {
        
-          return data.json() as House[];
+          return data.json() as House;
         }).toPromise().then(x => {
-        this.houseList1 = x;
+        this.selectedHouse = x;
       });
     }
     getHouseListR() {

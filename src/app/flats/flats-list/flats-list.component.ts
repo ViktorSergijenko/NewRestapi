@@ -2,11 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import {FlatService} from '../shared/flat.service';
 import {Flat} from '../shared/flat.model';
 import {ToastrService} from 'ngx-toastr';
+import { Pipe, PipeTransform } from '@angular/core';
 @Component({
   selector: 'app-flats-list',
   templateUrl: './flats-list.component.html',
   styleUrls: ['./flats-list.component.css']
 })
+
+
 export class FlatsListComponent implements OnInit {
 
   constructor(private flatService : FlatService,private toastr: ToastrService) { }
