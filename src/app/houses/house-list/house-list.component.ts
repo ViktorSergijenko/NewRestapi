@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {HouseService} from '../shared/house.service';
 import { House } from '../shared/house.model';
 import {ToastrService} from 'ngx-toastr';
+import { FlatService } from '../../flats/shared/flat.service';
 @Component({
   selector: 'app-house-list',
   templateUrl: './house-list.component.html',
@@ -13,6 +14,7 @@ export class HouseListComponent implements OnInit {
 
   ngOnInit() {
     this.houseService.getHouseList();
+   
   }
     showForedit(hos: House) {
       

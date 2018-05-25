@@ -16,10 +16,11 @@ export class FlatsListComponent implements OnInit {
 
   ngOnInit() {
     this.flatService.getFlatList();
-    this.flatService.getHouseListR();
-    
+    this.flatService.getHouseList();
   }
   
+
+
 
   showForedit(fla: Flat) {
       
@@ -28,10 +29,9 @@ export class FlatsListComponent implements OnInit {
   }
   ShowInfo2(houseid: number){
     this.flatService.getHouseList2(houseid);
+    // this.myFunc();
   }
-  ShowInfo(houseid: number){
-    this.flatService.getHouseList(houseid);
-  }
+
   onDelete(id: number) {
     if (confirm('Are you sure to delete this record ?') === true) {
     this.flatService.deleteFlat(id)

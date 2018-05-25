@@ -32,12 +32,22 @@ export class ResidentService {
         this.residentList = x;
       });
     }
-    getFlatList() {
+    getFlatListToDropDown() {
+      console.log('hi');
       this.http.get('http://localhost:52414/api/Flat')
+        .map((data: Response) => {
+          return data.json() as Flat[];
+        }).toPromise().then(x => {
+          this.flatList = x;
+        });
+    }
+    getFlatList(flatid: number) {
+      this.http.get('http://localhost:52414/api/Flat/'+ flatid)
       .map((data: Response) => {
-        return data.json() as Flat[];
-      }).toPromise().then(x => {
-        this.flatList = x;
+       
+          return data.json() as Flat;
+        }).toPromise().then(x => {
+        this.selectedFlat = x;
       });
     }
     deleteResident(id: number) {

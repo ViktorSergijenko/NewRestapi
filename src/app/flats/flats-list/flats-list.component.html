@@ -17,8 +17,8 @@
 </table>
 
 <table class="table table-sm table-hover">
-  <tr *ngFor="let house of flatService.selectedHouse">
-    <td> Street:{{house.street}} - City:{{house.city}}</td>
-    <td>Country{{house.country}} - postindex:{{house.postindex}}</td>
+  <tr>
+    <td> Street:{{flatService.selectedHouse.street}} - City:{{flatService.selectedHouse.city}}</td>
+    <td>Country{{flatService.selectedHouse.country}} - postindex:{{flatService.selectedHouse.postindex}}</td>
   </tr>
 </table>

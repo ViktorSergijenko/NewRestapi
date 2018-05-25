@@ -18,7 +18,7 @@ import { ResidentsComponent } from './residents/residents.component';
 import { ResidentComponent } from './residents/resident/resident.component';
 import { ResidentListComponent } from './residents/resident-list/resident-list.component';
 import { RouterModule } from '@angular/router';
-import { ObjNgForPipePipe } from './obj-ng-for-pipe.pipe';
+
 
 const routes=[
   {path: '', component: HousesComponent},
@@ -38,7 +38,7 @@ const routes=[
     ResidentsComponent,
     ResidentComponent,
     ResidentListComponent,
-    ObjNgForPipePipe,
+    
   
   ],
   imports: [

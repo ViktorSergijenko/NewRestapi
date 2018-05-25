@@ -9,6 +9,15 @@
       <a class="btn text-danger" (click)="onDelete(resident.id)">
           <i class="fa fa-trash-o"></i>
         </a>
+        <a class="btn">
+          <i class="fa fa-arrow-circle-o-down" (click)="ShowInfo2(resident.flatid)"></i>
+        </a>
     </td>
+  </tr>
+</table>
+<table class="table table-sm table-hover">
+  <tr>
+    <td> floor:{{residentService.selectedFlat.floor}} - number:{{residentService.selectedFlat.number}} - houseid:{{residentService.selectedFlat.houseid}}</td>
+    <td>totalarea{{residentService.selectedFlat.totalarea}} - livingspace:{{residentService.selectedFlat.livingspace}}</td>
   </tr>
 </table>
