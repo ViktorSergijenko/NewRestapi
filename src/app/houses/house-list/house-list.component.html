@@ -1,4 +1,5 @@
 <table class="table table-sm table-hover">
+         
   <tr *ngFor="let house of houseService.houseList">
     <td>Street:{{house.street}} - City:{{house.city}} - Country:{{house.country}}</td>
     <td>P.index:{{house.postindex}}</td>
@@ -16,9 +17,26 @@
   </tr>
 </table>
 <table class="table table-sm table-hover">
-  <tr *ngFor="let flat of houseService.flatList">
+    <tr>
+    <td>Flats:</td>
+  </tr>
+  <tr *ngFor="let flat of houseService.SourtedFlats">
     <td>Floor:{{flat.floor}} - Number:{{flat.number}} - Total Area:{{flat.totalarea}}</td>
     <td>Liv.Space{{flat.livingspace}} - House Number:{{flat.houseid}}</td>
-    
+    <td>
+        <a class="btn">
+          <i class="fa fa-arrow-circle-o-down" (click)="showInfoAboutFlat(flat.id)"></i>
+        </a>
+    </td>
   </tr>
+  
 </table>
+<table class="table table-sm table-hover">
+    <tr>
+        <td>Residents:</td>
+      </tr>
+    <tr *ngFor="let resident of houseService.SourtedResidents">
+      <td>Name:{{resident.firstname}} - Surname:{{resident.lastname}} - P.Code:{{resident.postcode}}</td>
+      <td>Phone:{{resident.phone}} - Email:{{resident.email}} - FlatId: {{resident.flatid}}</td>
+    </tr>
+  </table>

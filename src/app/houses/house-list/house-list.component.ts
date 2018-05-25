@@ -22,9 +22,13 @@ export class HouseListComponent implements OnInit {
       this.houseService.selectedHouse = Object.assign({}, hos);
     }
     showInfoAboutHouse(id:number){
+      this.houseService.SourtedFlats=[];
       this.houseService.getFlatListAsAdditionalInformationAboutHouse(id);
     }
-
+    showInfoAboutFlat(id:number){
+      this.houseService.SourtedResidents=[];
+      this.houseService.getResidentListAsAdditionalInformationAboutFlat(id);
+    }
     onDelete(id: number) {
       if (confirm('Are you sure to delete this record ?') === true) {
       this.houseService.deleteHouse(id)
