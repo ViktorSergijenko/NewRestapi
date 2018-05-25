@@ -16,7 +16,7 @@ export class FlatsListComponent implements OnInit {
 
   ngOnInit() {
     this.flatService.getFlatList();
-    this.flatService.getHouseList();
+    this.flatService.getHouseListForDropDown();
   }
   
 

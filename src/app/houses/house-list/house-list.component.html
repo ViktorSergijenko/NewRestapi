@@ -9,6 +9,16 @@
       <a class="btn text-danger" (click)="onDelete(house.id)">
           <i class="fa fa-trash-o"></i>
         </a>
+        <a class="btn">
+          <i class="fa fa-arrow-circle-o-down" (click)="showInfoAboutHouse(house.id)"></i>
+        </a>
     </td>
+  </tr>
+</table>
+<table class="table table-sm table-hover">
+  <tr *ngFor="let flat of houseService.flatList">
+    <td>Floor:{{flat.floor}} - Number:{{flat.number}} - Total Area:{{flat.totalarea}}</td>
+    <td>Liv.Space{{flat.livingspace}} - House Number:{{flat.houseid}}</td>
+    
   </tr>
 </table>

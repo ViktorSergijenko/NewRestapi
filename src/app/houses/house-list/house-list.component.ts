@@ -21,6 +21,10 @@ export class HouseListComponent implements OnInit {
       // nuzno dlja togo wtobi izmenenija v objekte sohranjalisj ne srazu
       this.houseService.selectedHouse = Object.assign({}, hos);
     }
+    showInfoAboutHouse(id:number){
+      this.houseService.getFlatListAsAdditionalInformationAboutHouse(id);
+    }
+
     onDelete(id: number) {
       if (confirm('Are you sure to delete this record ?') === true) {
       this.houseService.deleteHouse(id)

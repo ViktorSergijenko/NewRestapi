@@ -1,15 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-// tslint:disable-next-line:import-spacing
-import {FormsModule} from'@angular/forms';
-import {HttpModule} from '@angular/http';
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 import { TitleCasePipe } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { HousesComponent } from './houses/houses.component';
 import { HouseComponent } from './houses/house/house.component';
 import { HouseListComponent } from './houses/house-list/house-list.component';
-import {ToastrModule} from 'ngx-toastr';
+import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlatsComponent } from './flats/flats.component';
 import { FlatComponent } from './flats/flat/flat.component';
@@ -20,10 +19,10 @@ import { ResidentListComponent } from './residents/resident-list/resident-list.c
 import { RouterModule } from '@angular/router';
 
 
-const routes=[
-  {path: '', component: HousesComponent},
-  {path: 'flats', component: FlatsComponent},
-  {path: 'residents', component: ResidentsComponent}
+const routes = [
+  { path: '', component: HousesComponent },
+  { path: 'flats', component: FlatsComponent },
+  { path: 'residents', component: ResidentsComponent }
 ];
 
 @NgModule({
@@ -38,8 +37,8 @@ const routes=[
     ResidentsComponent,
     ResidentComponent,
     ResidentListComponent,
-    
-  
+
+
   ],
   imports: [
     BrowserAnimationsModule,
