@@ -19,7 +19,7 @@ export class HouseService {
   constructor(private http: Http) { }
   postHouse(hos: House) {
     var body = JSON.stringify(hos); // why i cant use var and let instead of const here?
-    let headerOptions = new Headers({ 'Content-Type': 'application/json' });
+    var headerOptions = new Headers({ 'Content-Type': 'application/json' });
     var requestOptions = new RequestOptions({ method: RequestMethod.Post, headers: headerOptions });
     return this.http.post('http://localhost:52414/api/House', body, requestOptions).map(x => x.json());
   }

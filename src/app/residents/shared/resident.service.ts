@@ -13,7 +13,7 @@ export class ResidentService {
   flatList:Flat[];
   constructor(private http: Http) { }
   postResident(resi: Resident) {
-    var body = JSON.stringify(resi); 
+    var body = JSON.stringify(resi);
     var headerOptions = new Headers({'Content-Type': 'application/json'});
     var requestOptions = new RequestOptions({method : RequestMethod.Post, headers : headerOptions});
    return this.http.post('http://localhost:52414/api/Resident', body, requestOptions).map(x => x.json());

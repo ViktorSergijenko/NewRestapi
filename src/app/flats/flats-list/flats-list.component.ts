@@ -18,12 +18,10 @@ export class FlatsListComponent implements OnInit {
     this.flatService.getFlatList();
     this.flatService.getHouseListForDropDown();
   }
-  
 
 
 
   showForedit(fla: Flat) {
-      
     // nuzno dlja togo wtobi izmenenija v objekte sohranjalisj ne srazu
     this.flatService.selectedFlat = Object.assign({}, fla);
   }

@@ -28,6 +28,7 @@ namespace TESTAPI
       //services.AddDbContext<HouseContext>(opt => opt.UseInMemoryDatabase("HouseList"));
       services.AddDbContext<HouseContext>(opt => opt.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=ProjectV13;Trusted_Connection=True;"));
             services.AddMvc()
+        
             
                 .AddJsonOptions(o => o.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
             services.AddCors(options =>
