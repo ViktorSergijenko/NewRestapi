@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {HouseService} from '../shared/house.service';
+import { HouseService } from '../shared/house.service';
 import { House } from '../shared/house.model';
-import {ToastrService} from 'ngx-toastr';
+import { ToastrService } from 'ngx-toastr';
 import { FlatService } from '../../flats/shared/flat.service';
 @Component({
   selector: 'app-house-list',
@@ -10,32 +10,30 @@ import { FlatService } from '../../flats/shared/flat.service';
 })
 export class HouseListComponent implements OnInit {
 
-  constructor(private houseService: HouseService, private toastr: ToastrService)  { }
+  constructor(private houseService: HouseService, private toastr: ToastrService) { }
 
   ngOnInit() {
     this.houseService.getHouseList();
-   
   }
-    showForedit(hos: House) {
-      
-      // nuzno dlja togo wtobi izmenenija v objekte sohranjalisj ne srazu
-      this.houseService.selectedHouse = Object.assign({}, hos);
-    }
-    showInfoAboutHouse(id:number){
-      this.houseService.SourtedFlats=[];
-      this.houseService.getFlatListAsAdditionalInformationAboutHouse(id);
-    }
-    showInfoAboutFlat(id:number){
-      this.houseService.SourtedResidents=[];
-      this.houseService.getResidentListAsAdditionalInformationAboutFlat(id);
-    }
-    onDelete(id: number) {
-      if (confirm('Are you sure to delete this record ?') === true) {
+  showForedit(hos: House) {
+    // nuzno dlja togo wtobi izmenenija v objekte sohranjalisj ne srazu
+    this.houseService.selectedHouse = Object.assign({}, hos);
+  }
+  showInfoAboutHouse(id: number) {
+    this.houseService.SourtedFlats = [];
+    this.houseService.getFlatListAsAdditionalInformationAboutHouse(id);
+  }
+  showInfoAboutFlat(id: number) {
+    this.houseService.SourtedResidents = [];
+    this.houseService.getResidentListAsAdditionalInformationAboutFlat(id);
+  }
+  onDelete(id: number) {
+    if (confirm('Are you sure to delete this record ?') === true) {
       this.houseService.deleteHouse(id)
-      .subscribe(x => {
-        this.houseService.getHouseList();
-        this.toastr.warning('Deleted :)', 'House Register');
-      })
-      }
-     }
+        .subscribe(x => {
+          this.houseService.getHouseList();
+          this.toastr.warning('Deleted :)', 'House Register');
+        });
+    }
+  }
 }

@@ -18,11 +18,11 @@ import { ResidentComponent } from './residents/resident/resident.component';
 import { ResidentListComponent } from './residents/resident-list/resident-list.component';
 import { RouterModule } from '@angular/router';
 
-
+// all routes that i have in project,when project was opened for the first time,first page that will be loaded is HouseRegister
 const routes = [
-  { path: '', component: HousesComponent },
-  { path: 'flats', component: FlatsComponent },
-  { path: 'residents', component: ResidentsComponent }
+  { path: '', component: HousesComponent }, // main path-HouseRegister
+  { path: 'flats', component: FlatsComponent }, // path to FlatRegister page
+  { path: 'residents', component: ResidentsComponent } // path to ResidentRegister
 ];
 
 @NgModule({

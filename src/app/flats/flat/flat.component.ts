@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FlatService} from '../shared/flat.service';
+import { FlatService } from '../shared/flat.service';
 import { NgForm } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { Flat } from '../shared/flat.model';
@@ -10,7 +10,7 @@ import { Flat } from '../shared/flat.model';
 })
 export class FlatComponent implements OnInit {
 
-  constructor(private flatService : FlatService,private toastr: ToastrService) { }
+  constructor(private flatService: FlatService, private toastr: ToastrService) { }
 
   ngOnInit() {
     this.flatService.selectedFlat = new Flat();
@@ -26,20 +26,19 @@ export class FlatComponent implements OnInit {
       totalarea: null,
       livingspace: null,
       houseid: null,
-      house:null,
-      residents:null
-      
-    }
+      house: null,
+      residents: null
+    };
   }
-  selectchange(args){
-    this.flatService.selectedHouse.id=args.target.id;
+  selectchange(args) {
+    this.flatService.selectedHouse.id = args.target.id;
   }
 
-  selectdrop(args){
-    this.flatService.selectedHouse.id=args.id;
+  selectdrop(args) {
+    this.flatService.selectedHouse.id = args.id;
   }
-  selectChange1( $event) {
-    //In my case $event come with a id value
+  selectChange1($event) {
+    // In my case $event come with a id value
     this.flatService.houseList1 = this.flatService.selectedHouse[$event];
   }
   onSubmit(form: NgForm) {
@@ -49,9 +48,8 @@ export class FlatComponent implements OnInit {
           this.resetForm(form);
           this.flatService.getFlatList();
           this.toastr.success('New Record Added', 'Flat registered');
-        })
-    } 
-    else {
+        });
+    } else {
       this.flatService.putFlat(form.value.id, form.value)
         .subscribe(data => {
           this.resetForm(form);

@@ -27,10 +27,8 @@ export class HouseComponent implements OnInit {
       city: '',
       country: '',
       postindex: '',
-      flats:null
-      
-      
-    }
+      flats: null
+    };
   }
   onSubmit(form: NgForm) {
     if (!form.value.id) {
@@ -39,9 +37,8 @@ export class HouseComponent implements OnInit {
           this.resetForm(form);
           this.houseService.getHouseList();
           this.toastr.success('New Record Added', 'House registered');
-        })
-    } 
-    else {
+        });
+    } else {
       this.houseService.putHouse(form.value.id, form.value)
         .subscribe(data => {
           this.resetForm(form);
@@ -50,5 +47,4 @@ export class HouseComponent implements OnInit {
         });
     }
   }
-
 }
