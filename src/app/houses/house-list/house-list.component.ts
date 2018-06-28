@@ -11,7 +11,12 @@ import { FlatService } from '../../flats/shared/flat.service';
 export class HouseListComponent implements OnInit {
 
   constructor(private houseService: HouseService, private toastr: ToastrService) { }
-
+  /**
+   * fucntion that will ensure that when our project will be initialized
+   * the fucntions that are in it will be immediately called
+   * in our case it will call getHouseList(to get House list)
+   * @memberof ResidentListComponent
+   */
   ngOnInit() {
     this.houseService.getHouseList();
   }
