@@ -2,14 +2,22 @@ import { Component, OnInit } from '@angular/core';
 import { ResidentService } from '../shared/resident.service';
 import { Resident } from '../shared/resident.model';
 import { ToastrService } from 'ngx-toastr';
+import { LoginService } from '../../shared/login.service';
 @Component({
   selector: 'app-resident-list',
   templateUrl: './resident-list.component.html',
   styleUrls: ['./resident-list.component.css']
 })
 export class ResidentListComponent implements OnInit {
+  isAdmin: boolean;
 
-  constructor(private residentService: ResidentService, private toastr: ToastrService) { }
+  constructor(private residentService: ResidentService, private toastr: ToastrService, private loginService: LoginService) {
+    if (this.loginService.checkIfAdmin()) {
+      this.isAdmin = true;
+    } else {
+      this.isAdmin = false;
+    }
+   }
   /**
    * fucntion that will ensure that when our project will be initialized
    * the fucntions that are in it will be immediately called

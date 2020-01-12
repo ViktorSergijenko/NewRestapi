@@ -5033,10 +5033,12 @@
   },
   "libraries": {
     "Libuv/1.10.0": {
-      "sha512": "GsCf4q+eyaI49rCPlgYxdxa1SQCysXFFdSJWdstrwxytg4+VPYLYrXD4AT2rjHVJ+UF7SSWX9CapWEYaU4ejVQ==",
+      "sha512": "zisTbxitzki256+rKY0myI2T1yLyO9+qAU8P+FXkd8Dv0Iymk484Y9SbwUlyL3igF/bpiCv7SCdv349rN/JbfQ==",
       "type": "package",
       "path": "libuv/1.10.0",
       "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
         "License.txt",
         "libuv.1.10.0.nupkg.sha512",
         "libuv.nuspec",
@@ -5051,10 +5053,12 @@
       ]
     },
     "Microsoft.ApplicationInsights/2.4.0": {
-      "sha512": "4dX/zu3Psz9oM3ErU64xfOHuSxOwMxN6q5RabSkeYbX42Yn6dR/kDToqjs+txCRjrfHUxyYjfeJHu+MbCfvAsg==",
+      "sha512": "KnW9kZcj+GnPA0OCKk6TXqJTXMp8dwtad30akKxI/0oyDZ4isfwt/7WakT0o3VPsU76kg/SFc3OIsReoqPF+9w==",
       "type": "package",
       "path": "microsoft.applicationinsights/2.4.0",
       "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
         "lib/net40/Microsoft.ApplicationInsights.XML",
         "lib/net40/Microsoft.ApplicationInsights.dll",
         "lib/net45/Microsoft.ApplicationInsights.XML",
@@ -5071,10 +5075,12 @@
       ]
     },
     "Microsoft.ApplicationInsights.AspNetCore/2.1.1": {
-      "sha512": "kiGmzl9Cav34dF7AHVMoJxdJJQEeLB8KZGNwX1LjImG9iem5hGk4DkHpW7/m9Nh3DrL8IKSL3mqQo+IPqWfMRQ==",
+      "sha512": "HsN6IUHa3Wg0jltWR7e2N/eji6JmfUTsNiBSoagK5e+nTeXz1Sn5W0P8X7K1cxCAZTK4xHMIUlD/EFk+/7b7Fw==",
       "type": "package",
       "path": "microsoft.applicationinsights.aspnetcore/2.1.1",
       "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
         "lib/net451/Microsoft.ApplicationInsights.AspNetCore.dll",
         "lib/net451/Microsoft.ApplicationInsights.AspNetCore.xml",
         "lib/netstandard1.6/Microsoft.ApplicationInsights.AspNetCore.dll",
@@ -5084,10 +5090,12 @@
       ]
     },
     "Microsoft.ApplicationInsights.DependencyCollector/2.4.1": {
-      "sha512": "RWxdX90MY6tNF8S5lwRvJcHiBMIWwVLCxd4TGIEl3X0yAKaolY2vs4zTCvyCIVkEAMs1aInTgWkYwOjzYvAHWw==",
+      "sha512": "9dNiUxWKLlOxfk9PLrqg+idGZOkfC6Cc+wv9vieVxvcUMxDX2bRLg85F0p7gCStCwcjRySEBaJIDzktw8S8vkQ==",
       "type": "package",
       "path": "microsoft.applicationinsights.dependencycollector/2.4.1",
       "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
         "content/ApplicationInsights.config.install.xdt",
         "content/ApplicationInsights.config.transform",
         "content/ApplicationInsights.config.uninstall.xdt",
@@ -6037,10 +6045,12 @@
       ]
     },
     "Microsoft.Azure.KeyVault/2.3.2": {
-      "sha512": "A82ESUdfLz2wMhYuPxrwf/fA7JVt3IARgeMCG3TsaLtxUxa9RBKX3f0zdnKmvBvJ/u1/5g03OLR26GPekqY5HQ==",
+      "sha512": "yDH55c/EKEv4n3wUajrgh7KGm801/hbdkbOD+A2Axyie+4IKhzf+9CH3k8E90DfCO6OdcChKPS2YqmckVl6J2A==",
       "type": "package",
       "path": "microsoft.azure.keyvault/2.3.2",
       "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
         "lib/net452/Microsoft.Azure.KeyVault.dll",
         "lib/net452/Microsoft.Azure.KeyVault.runtimeconfig.json",
         "lib/net452/Microsoft.Azure.KeyVault.xml",
@@ -6052,10 +6062,12 @@
       ]
     },
     "Microsoft.Azure.KeyVault.WebKey/2.0.7": {
-      "sha512": "MVSYao62R9rwl9KF+IsJm+XBLupJj1ma2lfwNeFlSWziXGAopnYK+YkDWqABOqNIV9kpza/MvNBxITzhlJIyIw==",
+      "sha512": "1dGRG0RqG4fCYzb+TXex9aPnMdTkRv+2TlCqmvp/MAyNZ1B3cZJ8tGSTKNE9MtDbxxTHJJlsFiX9Qx/HpwFG7Q==",
       "type": "package",
       "path": "microsoft.azure.keyvault.webkey/2.0.7",
       "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
         "lib/net452/Microsoft.Azure.KeyVault.WebKey.dll",
         "lib/net452/Microsoft.Azure.KeyVault.WebKey.runtimeconfig.json",
         "lib/net452/Microsoft.Azure.KeyVault.WebKey.xml",
@@ -7589,10 +7601,12 @@
       ]
     },
     "Microsoft.Rest.ClientRuntime/2.3.8": {
-      "sha512": "Hj96LBoCwKY2VQKfSCVGGPV1sSumVjuYnrlpBwL4JSTnSK4b6ZxjLtXj8LgmKav8xJ2gps+UN7eI3hHVFKvBFw==",
+      "sha512": "QWtcuaiHYDz/zDIkzupegr7O5bagWfAuEtbBYDKfAkERxTK4U6moxi6cgSinElJXCJ47WRcnhQVXbs/F229jgg==",
       "type": "package",
       "path": "microsoft.rest.clientruntime/2.3.8",
       "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
         "lib/net452/Microsoft.Rest.ClientRuntime.dll",
         "lib/net452/Microsoft.Rest.ClientRuntime.runtimeconfig.json",
         "lib/net452/Microsoft.Rest.ClientRuntime.xml",
@@ -7604,10 +7618,12 @@
       ]
     },
     "Microsoft.Rest.ClientRuntime.Azure/3.3.7": {
-      "sha512": "6u8JIuvrztse4tPOcvNzAJuzGBP0uY+Ijggk8ZYhp0siGEZ1XfZylf1vpNGUicvwcrhhoIgDW73Z1L6QGssr2g==",
+      "sha512": "CgO+/QV35GIEYaV3x1pqWWxj/F95FBXNU9Npfu7zISs1wQVCeMzmSsKx1QKdCWwJt/+wx151sT0Rff8Bxbe2Eg==",
       "type": "package",
       "path": "microsoft.rest.clientruntime.azure/3.3.7",
       "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
         "lib/net452/Microsoft.Rest.ClientRuntime.Azure.dll",
         "lib/net452/Microsoft.Rest.ClientRuntime.Azure.runtimeconfig.json",
         "lib/net452/Microsoft.Rest.ClientRuntime.Azure.xml",
@@ -10321,10 +10337,11 @@
       ]
     },
     "System.Net.NameResolution/4.3.0": {
-      "sha512": "AFYl08R7MrsrEjqpQWTZWBadqXyTzNDaWpMqyxhb0d6sGhV6xMDKueuBXlLL30gz+DIRY6MpdgnHWlCh5wmq9w==",
+      "sha512": "DPvMSdd32CbEOCTtOpO4nY9UvbP6LJe375F1yEQjy667WT5LEh1Ek2T4DSVw1STR0K3LSawWfBFwoeSG0TXFeA==",
       "type": "package",
       "path": "system.net.nameresolution/4.3.0",
       "files": [
+        ".nupkg.metadata",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -13094,10 +13111,12 @@
       ]
     },
     "WindowsAzure.Storage/8.1.4": {
-      "sha512": "W6ZZ0/o7+3Qb77mRAQyLjPudHG3OMeeQ4p9yY13PUdJArmRCx2cLMm5F4tpIjJXxzHC0ew0oK7DMDGILMdfCnw==",
+      "sha512": "KXblJ3XWzUORNFiIoItmK/sOFIa3aKdjXSpdiCpYmqUKeFt6BQ1pDoGqeynvmuwLqlqp6/+RCXnW+Fix1bPWxQ==",
       "type": "package",
       "path": "windowsazure.storage/8.1.4",
       "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
         "lib/net45/Microsoft.WindowsAzure.Storage.dll",
         "lib/net45/Microsoft.WindowsAzure.Storage.pdb",
         "lib/net45/Microsoft.WindowsAzure.Storage.xml",
@@ -13124,23 +13143,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\PC\\.nuget\\packages\\": {},
+    "C:\\Users\\Vitto\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\PC\\Desktop\\RestApi\\TESTAPI\\TESTAPI\\TESTAPI.csproj",
+      "projectUniqueName": "C:\\Users\\Vitto\\Desktop\\Work\\NewRestapi\\TESTAPI\\TESTAPI\\TESTAPI.csproj",
       "projectName": "TESTAPI",
-      "projectPath": "C:\\Users\\PC\\Desktop\\RestApi\\TESTAPI\\TESTAPI\\TESTAPI.csproj",
-      "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\PC\\Desktop\\RestApi\\TESTAPI\\TESTAPI\\obj\\",
+      "projectPath": "C:\\Users\\Vitto\\Desktop\\Work\\NewRestapi\\TESTAPI\\TESTAPI\\TESTAPI.csproj",
+      "packagesPath": "C:\\Users\\Vitto\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Vitto\\Desktop\\Work\\NewRestapi\\TESTAPI\\TESTAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Vitto\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -13169,6 +13188,7 @@
             "version": "[2.0.6, )"
           },
           "Microsoft.NETCore.App": {
+            "suppressParent": "All",
             "target": "Package",
             "version": "[2.0.0, )",
             "autoReferenced": true
@@ -13179,10 +13199,16 @@
           }
         },
         "imports": [
-          "net461"
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
         ],
         "assetTargetFallback": true,
-        "warn": true
+        "warn": true,
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

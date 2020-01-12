@@ -3,14 +3,22 @@ import { HouseService } from '../shared/house.service';
 import { House } from '../shared/house.model';
 import { ToastrService } from 'ngx-toastr';
 import { FlatService } from '../../flats/shared/flat.service';
+import { LoginService } from '../../shared/login.service';
 @Component({
   selector: 'app-house-list',
   templateUrl: './house-list.component.html',
   styleUrls: ['./house-list.component.css']
 })
 export class HouseListComponent implements OnInit {
+  isAdmin: boolean;
 
-  constructor(private houseService: HouseService, private toastr: ToastrService) { }
+  constructor(private houseService: HouseService, private toastr: ToastrService, private loginService: LoginService) {
+    if (this.loginService.checkIfAdmin()) {
+      this.isAdmin = true;
+    } else {
+      this.isAdmin = false;
+    }
+   }
   /**
    * fucntion that will ensure that when our project will be initialized
    * the fucntions that are in it will be immediately called

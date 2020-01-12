@@ -2,7 +2,7 @@
   <h2 class="jumbotron bg-secondary text-white">Resident Register</h2>
 </div>
 <div class="row">
-<div class="col-md-6">
+<div class="col-md-6"  *ngIf="isAdmin">
   <app-resident></app-resident>
 </div>
 <div class="col-md-6">

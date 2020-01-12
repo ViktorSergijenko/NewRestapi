@@ -26,7 +26,7 @@ namespace TESTAPI
         {
       
       //services.AddDbContext<HouseContext>(opt => opt.UseInMemoryDatabase("HouseList"));
-      services.AddDbContext<HouseContext>(opt => opt.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=ProjectV13;Trusted_Connection=True;"));
+      services.AddDbContext<HouseContext>(opt => opt.UseSqlServer(@"Server=localhost;Database=ProjectV13;Trusted_Connection=True;"));
             services.AddMvc()
         
             

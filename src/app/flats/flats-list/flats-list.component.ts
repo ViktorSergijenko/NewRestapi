@@ -3,6 +3,7 @@ import { FlatService } from '../shared/flat.service';
 import { Flat } from '../shared/flat.model';
 import { ToastrService } from 'ngx-toastr';
 import { Pipe, PipeTransform } from '@angular/core';
+import { LoginService } from '../../shared/login.service';
 @Component({
   selector: 'app-flats-list',
   templateUrl: './flats-list.component.html',
@@ -11,8 +12,15 @@ import { Pipe, PipeTransform } from '@angular/core';
 
 
 export class FlatsListComponent implements OnInit {
+  isAdmin: boolean;
 
-  constructor(private flatService: FlatService, private toastr: ToastrService) { }
+  constructor(private flatService: FlatService, private toastr: ToastrService, private loginService: LoginService) {
+    if (this.loginService.checkIfAdmin()) {
+      this.isAdmin = true;
+    } else {
+      this.isAdmin = false;
+    }
+   }
 
   ngOnInit() {
     this.flatService.getFlatList();

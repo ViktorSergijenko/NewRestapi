@@ -3,14 +3,23 @@ import { HouseService } from '../shared/house.service';
 import { NgForm } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { House } from '../shared/house.model';
+import { LoginService } from '../../shared/login.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-house',
   templateUrl: './house.component.html',
   styleUrls: ['./house.component.css']
 })
 export class HouseComponent implements OnInit {
+  isAdmin: boolean;
 
-  constructor(private houseService: HouseService, private toastr: ToastrService) { }
+  constructor(private houseService: HouseService, private toastr: ToastrService, private loginService: LoginService, private router: Router) {
+    if (this.loginService.checkIfAdmin()) {
+      this.isAdmin = true;
+    } else {
+      this.isAdmin = false;
+    }
+   }
 
   ngOnInit() {
     // Init object with empty values

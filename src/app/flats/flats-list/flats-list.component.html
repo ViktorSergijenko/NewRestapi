@@ -3,10 +3,10 @@
     <td>Floor:{{flat.floor}} - Number:{{flat.number}} - Total Area:{{flat.totalarea}}</td>
     <td>Liv.Space{{flat.livingspace}} - House Number:{{flat.houseid}}</td>
     <td>
-      <a class="btn" (click)="showForedit(flat)">
+      <a class="btn"  *ngIf="isAdmin" (click)="showForedit(flat)">
         <i class="fa fa-pencil-square-o"></i>
       </a>
-      <a class="btn text-danger" (click)="onDelete(flat.id)">
+      <a class="btn text-danger"  *ngIf="isAdmin" (click)="onDelete(flat.id)">
           <i class="fa fa-trash-o"></i>
         </a>
         <a class="btn">

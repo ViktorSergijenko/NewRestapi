@@ -3,7 +3,7 @@
 </div>
 <div class="row">
 <div class="col-md-6">
-  <app-flat></app-flat>
+  <app-flat  *ngIf="isAdmin"></app-flat>
 </div>
 <div class="col-md-6">
   <app-flats-list></app-flats-list>

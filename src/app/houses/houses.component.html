@@ -3,7 +3,7 @@
 </div>
 <div class="row">
 <div class="col-md-6">
-  <app-house></app-house>
+  <app-house *ngIf="isAdmin"></app-house>
 </div>
 <div class="col-md-6">
   <app-house-list></app-house-list>

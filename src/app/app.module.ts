@@ -17,10 +17,15 @@ import { ResidentsComponent } from './residents/residents.component';
 import { ResidentComponent } from './residents/resident/resident.component';
 import { ResidentListComponent } from './residents/resident-list/resident-list.component';
 import { RouterModule } from '@angular/router';
+import { LoginComponent } from './login/login.component';
+import { LoginService } from './shared/login.service';
+
 
 // all routes that i have in project,when project was opened for the first time,first page that will be loaded is HouseRegister
 const routes = [
-  { path: '', component: HousesComponent }, // main path-HouseRegister
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: 'login', component: LoginComponent }, // main path-HouseRegister
+  { path: 'houses', component: HousesComponent }, // path to FlatRegister page
   { path: 'flats', component: FlatsComponent }, // path to FlatRegister page
   { path: 'residents', component: ResidentsComponent } // path to ResidentRegister
 ];
@@ -37,6 +42,7 @@ const routes = [
     ResidentsComponent,
     ResidentComponent,
     ResidentListComponent,
+    LoginComponent,
 
 
   ],
@@ -49,7 +55,7 @@ const routes = [
     ToastrModule.forRoot(),
     RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

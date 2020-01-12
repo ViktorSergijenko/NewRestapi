@@ -4,10 +4,10 @@
     <td>Street:{{house.street}} - City:{{house.city}} - Country:{{house.country}}</td>
     <td>P.index:{{house.postindex}}</td>
     <td>
-      <a class="btn" (click)="showForedit(house)">
+      <a class="btn" *ngIf="isAdmin" (click)="showForedit(house)">
         <i class="fa fa-pencil-square-o"></i>
       </a>
-      <a class="btn text-danger" (click)="onDelete(house.id)">
+      <a class="btn text-danger" *ngIf="isAdmin" (click)="onDelete(house.id)">
           <i class="fa fa-trash-o"></i>
         </a>
         <a class="btn">
